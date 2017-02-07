@@ -30,7 +30,7 @@
 				<td><a href="/show/{{$key->id}}">{{$key->id}}</a></td>
 				<td>{{$key->name}}</td>
 				<td>{{$key->description}}</td>
-				<td>{{$key->prix}} €</td>
+				<td>{{$key->prix /100}} €</td>
 				<td>{{$key->stock}}</td>
 				<td>{{$key->origine}}</td>
 			</tr>	
