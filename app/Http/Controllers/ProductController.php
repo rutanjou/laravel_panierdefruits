@@ -11,7 +11,7 @@ class ProductController extends Controller
     	return view('fruitsView', ['fruits'=>$fruits]);
      }
      public function getShow($id){
-     	$fruits = Fruit::find($id);
-     	return view('fruitsView', ['fruits'=>$fruits]);
+     	$fruit = Fruit::find($id);
+     	return view('show', ['fruit'=>$fruit]);
      }
 }
