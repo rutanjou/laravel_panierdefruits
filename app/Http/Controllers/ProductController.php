@@ -10,4 +10,8 @@ class ProductController extends Controller
     	$fruits = Fruit::all();  
     	return view('fruitsView', ['fruits'=>$fruits]);
      }
+     public function getShow($id){
+     	$fruits = Fruit::find($id);
+     	return view('fruitsView', ['fruits'=>$fruits]);
+     }
 }
