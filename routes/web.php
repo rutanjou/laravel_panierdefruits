@@ -13,3 +13,4 @@
 
 
 Route::get('/', 'ProductController@getIndex');
+Route::get('/show/{{id}}', 'ProductController@getShow');
