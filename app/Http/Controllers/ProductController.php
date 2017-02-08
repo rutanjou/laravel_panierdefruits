@@ -14,4 +14,16 @@ class ProductController extends Controller
      	$fruit = Fruit::find($id);
      	return view('show', ['fruit'=>$fruit]);
      }
+     public function getAdd($id){
+     	$fruit = Fruit::find($id);
+     	$fruit->stock++;
+     	$fruit->save();
+     	return back();
+     }
+     public function getDown($id){
+     	$fruit = Fruit::find($id);
+     	$fruit->stock--;
+     	$fruit->save();
+     	return back();
+     }
 }
