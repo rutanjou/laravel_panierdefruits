@@ -14,3 +14,5 @@
 
 Route::get('/', 'ProductController@getIndex');
 Route::get('/show/{id}', 'ProductController@getShow');
+Route::post('/show/add/{id}', 'ProductController@getAdd');
+Route::post('/show/down/{id}', 'ProductController@getDown');
