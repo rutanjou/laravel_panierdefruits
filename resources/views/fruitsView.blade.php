@@ -9,7 +9,9 @@
 	<div class="ui grid">
 	<div class="six wide colum">
 	</div>
+	
 	<h1>Table des Fruits</h1>
+	
 	</div>
 	<div class="ui grid">
 	<div class="four wide colum"></div>
@@ -38,5 +40,6 @@
 			</tbody>
 		</table>
 	</div>
+	<div></div>
 	</body>
 </html>
