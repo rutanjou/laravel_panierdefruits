@@ -9,21 +9,33 @@
 	<div class="ui container">
 		<h1>Product Manager</h1>
 		<h2>{{$fruit->name}}</h2>
-		<p>La couleur est {{$fruit->description}}.</p>
+		<h3>Description</h3>
+		<p>{{$fruit->description}}</p>
+		<h3>Prix</h3>
 		<p>Le prix est {{$fruit->prix /100}} €. </p>
-		<p>Il y a {{$fruit->stock}} .</p>
-		<div class="ui ">
-		<form action="/show/add/{{$fruit->id}}" method="post">
-		{{csrf_field()}} 
-			<button class="medium ui button"><i class="plus icon"></i></button>
-		</form> 
-		<form action="/show/down/{{$fruit->id}}" method="post">
-			{{csrf_field()}}
-			<button class="medium ui button"><i class="minus icon"></i></button>	
-		</form> 
+		<div class="ui segment">
+			<h3>Stock</h3>
+			<form action="/show/add/{{$fruit->id}}" method="post">
+				{{csrf_field()}} 
+				<button class="medium ui button"><i class="plus icon"></i></button>
+			</form> 
+			<p>Il y a {{$fruit->stock}} .</p>
+			<form action="/show/down/{{$fruit->id}}" method="post">
+				{{csrf_field()}}
+				<button class="medium ui button"><i class="minus icon"></i></button>	
+			</form> 
 		</div>
+		<h3>Origine</h3>
 		<p>Il est vient de {{$fruit->origine}} .</p>
-		<a href="/" class="ui button">Home</a>
+		<p><a href="/" class="ui blue button">Home</a>
+
+		<div class="ui container">
+			<a href="/show/editFruit/{{$fruit->id}}">
+				<input type="submit" value="Editer" class="ui red button">
+			</a>
+		</p>
+		</div>
+	</div>
 	</div>
 </body>
 </html>
