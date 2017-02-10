@@ -24,6 +24,7 @@
 					<th>Prix</th>
 					<th>Stock</th>
 					<th>Origine</th>
+					<th>Option</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -35,14 +36,20 @@
 					<td>{{$key->prix /100}} €</td>
 					<td>{{$key->stock}}</td>
 					<td>{{$key->origine}}</td>
-				</tr>	
+					<td>	
+						<form action="/{{$key->id}}" method="post">
+							{{csrf_field()}} 
+							<button class='ui red button' type="submit">Supprimer</button>
+						</form>
+					</td>
+				</tr>
 				@endforeach
 			</tbody>
 		</table>
 		<div class="ui container">
-		<a href="/addfruit">
-			<input type="submit" value="Ajouter" class="ui orange button">
-		</a>
+			<a href="/addfruit">
+				<input type="submit" value="Ajouter" class="ui orange button">
+			</a>
 		</div>
 	</div>
 </div>
