@@ -7,39 +7,44 @@
 </head>
 <body>
 	<div class="ui grid">
-	<div class="six wide colum">
-	</div>
-	
-	<h1>Table des Fruits</h1>
-	
+		<div class="six wide colum">
+		</div>
+
+		<h1>Table des Fruits</h1>
+
 	</div>
 	<div class="ui grid">
-	<div class="four wide colum"></div>
+		<div class="four wide colum"></div>
 		<table class="ui striped table">
-		<thead>
-			<tr>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Prix</th>
-			<th>Stock</th>
-			<th>Origine</th>
-			</tr>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Prix</th>
+					<th>Stock</th>
+					<th>Origine</th>
+				</tr>
 			</thead>
 			<tbody>
-			@foreach($fruits as $key)
-			<tr>
-				<td><a href="/show/{{$key->id}}">{{$key->id}}</a></td>
-				<td>{{$key->name}}</td>
-				<td>{{$key->description}}</td>
-				<td>{{$key->prix /100}} €</td>
-				<td>{{$key->stock}}</td>
-				<td>{{$key->origine}}</td>
-			</tr>	
-			  @endforeach
+				@foreach($fruits as $key)
+				<tr>
+					<td><a href="/show/{{$key->id}}">{{$key->id}}</a></td>
+					<td>{{$key->name}}</td>
+					<td>{{$key->description}}</td>
+					<td>{{$key->prix /100}} €</td>
+					<td>{{$key->stock}}</td>
+					<td>{{$key->origine}}</td>
+				</tr>	
+				@endforeach
 			</tbody>
 		</table>
+		<div class="ui container">
+		<a href="/addfruit">
+			<input type="submit" value="Ajouter" class="ui orange button">
+		</a>
+		</div>
 	</div>
-	<div></div>
-	</body>
+</div>
+</body>
 </html>
