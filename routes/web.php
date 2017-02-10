@@ -21,3 +21,4 @@ Route::post('/addfruit/new', 'ProductController@postAddFruit');
 Route::post('/show/delete/{id}', 'ProductController@postDelete');
 Route::get('/show/editFruit/{id}', 'ProductController@getEdit');
 Route::post('/show/editFruit/{id}', 'ProductController@postEditFruit');
+Route::post('/{id}','ProductController@postDelete');
